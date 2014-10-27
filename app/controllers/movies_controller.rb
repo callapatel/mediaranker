@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     if @movie.update(params.require[:movie].permit(:name, :director, :description, :ranking))
-      redirect_to root_path
+      redirect_to "/"
     else
       render :edit
     end
@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
   def create
     @movie.new(params.require[:movie].permit(:name, :director, :description, :ranking))
     if @movie.save
-      redirect_to root_path
+      redirect_to "/"
     else
       render :new
     end
