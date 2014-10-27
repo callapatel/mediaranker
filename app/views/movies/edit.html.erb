@@ -1,0 +1,9 @@
+<%= form_for @movie do |f| %>
+        <p><%= f.label :name %>:</p>
+        <p><%= f.text_field :name %></p>
+        <p><%= f.label :director %>:</p>
+        <p><%= f.text_field :director %></p>
+        <p><%= f.label :description %>:</p>
+        <p><%= f.text_field :description %></p>
+        <p><%= f.submit %></p>
+      <% end %>
