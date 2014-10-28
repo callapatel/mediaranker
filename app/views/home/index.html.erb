@@ -20,9 +20,9 @@
     <div class = "right col-lg-4">
       <h2> Top Albums: </h2>
       <% @albums.each do |album| %>
-        <br> <%= link_to album.name, album_path(album.id) %> </br>
-        <%= link_to "add another album", new_album_path %> 
+        <br> <%= link_to album.name, album_path(album.id) %> </br>    
       <% end %>
+      <%= link_to "add another album", new_album_path %>
     </div>
   </div>
 </div>

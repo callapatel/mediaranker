@@ -1,0 +1,9 @@
+<%= form_for @album, url: edit_album_path(@album.id) do |f| %>
+        <p><%= f.label :name %>:</p>
+        <p><%= f.text_field :name %></p>
+        <p><%= f.label :artist %>:</p>
+        <p><%= f.text_field :artist %></p>
+        <p><%= f.label :description %>:</p>
+        <p><%= f.text_field :description %></p>
+        <p><%= f.submit %></p>
+      <% end %>

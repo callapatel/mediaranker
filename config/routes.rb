@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 
   get "/movies/new",         to: "movies#new", as: :new_movie
-  put "/movies/:id",          to: "movies#update"
+  patch "/movies/:id/edit",          to: "movies#update"
   get "/movies/:id/edit",     to: "movies#edit",   as: :edit_movie
   get "/movies/:id",          to: "movies#details"
   delete "/movies/:id",        to: "movies#destroy", as: :movie
@@ -15,14 +15,14 @@ Rails.application.routes.draw do
 
   get "/albums/new",         to: "albums#new", as: :new_album
   get "/albums/:id",          to: "albums#details"
-  put "/albums/:id",          to: "albums#update"
+  patch "/albums/:id/edit",          to: "albums#update"
   get "/albums/:id/edit",     to: "albums#edit",   as: :edit_album
   delete "/albums/:id",         to: "albums#destroy", as: :album
   post "/albums",             to: "albums#create"
 
   get "/books/new",            to: "books#new", as: :new_book
   get "/books/:id",            to: "books#details"
-  put "/books/:id",           to: "books#update"
+  patch "/books/:id/edit",           to: "books#update"
   get "/books/:id/edit",      to: "books#edit", as: :edit_book
   delete "/books/:id",        to: "books#destroy", as: :book
   post "/books",             to: "books#create"
