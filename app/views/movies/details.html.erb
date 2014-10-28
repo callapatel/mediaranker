@@ -4,6 +4,6 @@
 <%= @movie.director %>
 <%= @movie.rank %>
 
-<%= link_to "Edit", movie_edit_path %>
-<%= link_to "Destroy", movies_destroy_path, :method => :delete, :confirm => "are you sure you want to delete?" %>
+<%= link_to "Edit", edit_movie_path %>
+<%= link_to "Destroy", movie_path, :method => :delete, :confirm => "are you sure you want to delete?" %>
 <%= link_to "View All Media", root_path %>
