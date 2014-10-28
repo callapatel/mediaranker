@@ -4,21 +4,21 @@
     <div class='sidebar col-lg-4'>
       <h2> Top Movies: </h2>
       <% @movies.each do |movie| %>
-        <%= movie.name %>
+        <br> <%= link_to movie.name, movies_detail_path(movie.id) %> </br>
       <% end %>
     </div>
 
     <div class="main col-lg-4">
       <h2> Top Books: </h2>
       <% @books.each do |book| %>
-        <%= book.name %>
+        <br> <%= link_to book.name, books_detail_path(book.id) %> </br>
       <% end %>
     </div>
 
     <div class = "right col-lg-4">
       <h2> Top Albums: </h2>
       <% @albums.each do |album| %>
-        <%= album.name %>
+        <br> <%= link_to album.name, albums_detail_path(album.id) %> </br>
       <% end %>
     </div>
   </div>
