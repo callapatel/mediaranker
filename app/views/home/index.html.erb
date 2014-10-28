@@ -6,6 +6,7 @@
       <% @movies.each do |movie| %>
         <br> <%= link_to movie.name, movies_path(movie.id) %> </br>
       <% end %>
+      <%= link_to "create a new movie", new_movie_path %>
     </div>
 
     <div class="main col-lg-4">
@@ -13,12 +14,14 @@
       <% @books.each do |book| %>
         <br> <%= link_to book.name, book_path(book.id) %> </br>
       <% end %>
+      <%= link_to "create a new book", new_book_path %>
     </div>
 
     <div class = "right col-lg-4">
       <h2> Top Albums: </h2>
       <% @albums.each do |album| %>
         <br> <%= link_to album.name, album_path(album.id) %> </br>
+        <%= link_to "add another album", new_album_path %> 
       <% end %>
     </div>
   </div>

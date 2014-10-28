@@ -1,0 +1,8 @@
+<%= @album.name %>
+<%= @album.description %>
+<%= @album.artist %>
+<%= @album.rank %>
+
+<%= link_to "Edit", edit_album_path %>
+<%= link_to "Destroy", album_path(@album.id), :method => :delete, :confirm => "are you sure you want to delete?" %>
+<%= link_to "View All Media", root_path %>
