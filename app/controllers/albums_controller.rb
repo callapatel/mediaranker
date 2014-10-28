@@ -27,7 +27,18 @@ class AlbumsController < ApplicationController
     @album.destroy
   end
 
+  def new
+    @album = Album.new
+  end
 
+  def create
+    @album = Album.new(params.require(:album).permit(:name, :artist, :description, :rank))
+    if @album.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
 
 
 

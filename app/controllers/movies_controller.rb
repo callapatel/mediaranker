@@ -40,9 +40,6 @@ class MoviesController < ApplicationController
     end
   end
 
-  def new
-    @movie = Movie.new
-  end
 
 
 end
