@@ -27,8 +27,12 @@ class MoviesController < ApplicationController
     redirect_to root_path
   end
 
+  def new
+    @movie = Movie.new
+  end
+
   def create
-    @movie.new(params.require[:movie].permit(:name, :director, :description, :ranking))
+    @movie = Movie.new(params.require(:movie).permit(:name, :director, :description, :rank))
     if @movie.save
       redirect_to "/"
     else

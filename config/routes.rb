@@ -18,14 +18,14 @@ Rails.application.routes.draw do
   put "/albums/:id",          to: "albums#update"
   get "/albums/:id/edit",     to: "albums#edit",   as: :edit_album
   delete "/albums/:id",         to: "albums#destroy", as: :album
-
+  post "/albums",             to: "albums#create"
 
   get "/books/new",            to: "books#new", as: :new_book
   get "/books/:id",            to: "books#details"
   put "/books/:id",           to: "books#update"
   get "/books/:id/edit",      to: "books#edit", as: :edit_book
   delete "/books/:id",        to: "books#destroy", as: :book
-
+  post "/books",             to: "books#create"
 
 
 

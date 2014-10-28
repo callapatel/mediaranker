@@ -28,6 +28,21 @@ class BooksController < ApplicationController
     redirect_to root_path
   end
 
+  def new
+    @book = Book.new
+  end
+
+  def create
+    @book = Book.new(params.require(:book).permit(:name, :author, :description, :rank))
+    # raise params.inspect
+    if @book.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+
 
 
 end
