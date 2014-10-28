@@ -1,0 +1,9 @@
+
+<%= @book.name %>
+<%= @book.description %>
+<%= @book.author %>
+<%= @book.rank %>
+
+<%= link_to "Edit", edit_book_path %>
+<%= link_to "Destroy", book_path(@book.id), :method => :delete, :confirm => "are you sure you want to delete?" %>
+<%= link_to "View All Media", root_path %>

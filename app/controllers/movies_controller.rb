@@ -24,6 +24,7 @@ class MoviesController < ApplicationController
   def destroy
     @movie = Movie.all.find(params[:id])
     @movie.destroy
+    redirect_to root_path
   end
 
   def create

@@ -6,24 +6,23 @@ Rails.application.routes.draw do
 
 
   get "/movies/new",         to: "movies#new", as: :new_movie
-  put "/movies/:id/edit",     to: "movies#update", as: :movie
-  get "/movies/:id/edit",     to: "movies#edit",   as: :movie_edit
-  get "/movies/:id",          to: "movies#details", as: :movies_detail
-
-  post "/movies/destroy/:id", to: "movies#destroy", as: :movie_destroy
+  put "/movies/:id",          to: "movies#update"
+  get "/movies/:id/edit",     to: "movies#edit",   as: :edit_movie
+  get "/movies/:id",          to: "movies#details"
+  delete "/movies/:id",        to: "movies#destroy", as: :movie
   post "/movies",             to: "movies#create"
 
 
-  get "/albums/:id",          to: "albums#details", as: :albums_detail
-  put "/albums/:id",          to: "album#update", as: :album_update
-  get "/albums/:id",          to: "album#edit",   as: :album_edit
-  post "/albums/destroy/:id", to: "albums#destroy", as: :album_destory
+  get "/albums/:id",          to: "albums#details"
+  put "/albums/:id",          to: "album#update"
+  get "/albums/:id/edit",     to: "album#edit",   as: :edit_album
+  delete "/albums/:id",         to: "albums#destroy", as: :album
 
 
-  get "/book/:id",            to: "books#details", as: :books_detail
-  put "/books/:id",           to: "book#update", as: :book_update
-  get "/books/:id",           to: "book#edit",   as: :book_edit
-  post "/books/destroy/:id",  to: "books#destroy", as: :book_destory
+  get "/book/:id",            to: "books#details"
+  put "/books/:id",           to: "book#update"
+  get "/books/:id/edit",      to: "book#edit", as: :edit_book
+  delete "/books/:id",        to: "books#destroy", as: :book
 
 
 

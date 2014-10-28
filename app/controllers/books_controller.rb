@@ -25,6 +25,7 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.all.find(params[:id])
     @book.destroy
+    redirect_to root_path
   end
 
 
