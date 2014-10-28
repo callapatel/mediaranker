@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
 
   get "/movies/new",         to: "movies#new", as: :new_movie
-  get "/movies/:id",          to: "movies#details"
   put "/movies/:id/edit",     to: "movies#update", as: :movie_update
   get "/movies/:id/edit",     to: "movies#edit",   as: :movie_edit
+  get "/movies/:id",          to: "movies#details"
+  
   post "/movies/destroy/:id", to: "movies#destroy", as: :movie_destroy
   post "/movies",             to: "movies#create"
 

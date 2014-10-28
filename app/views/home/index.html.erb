@@ -1,25 +1,28 @@
-<h2> Top Movies: </h2>
-  <% @movies.each do |movie| %>
-  <%= movie.name %>
-  <% end %>
+<body>
+<div class='container'>
+  <div class="row">
+    <div class='sidebar col-lg-4'>
+      <h2> Top Movies: </h2>
+      <% @movies.each do |movie| %>
+        <%= movie.name %>
+      <% end %>
+    </div>
+
+    <div class="main col-lg-4">
+      <h2> Top Books: </h2>
+      <% @books.each do |book| %>
+        <%= book.name %>
+      <% end %>
+    </div>
+
+    <div class = "right col-lg-4">
+      <h2> Top Albums: </h2>
+      <% @albums.each do |album| %>
+        <%= album.name %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
-
-
-
-
-<h2> Top Books: </h2>
-<% @books.each do |book| %>
-  <%= book.name %>
-  <% end %>
-
-
-
-
-
-
-
-<h2> Top Albums: </h2> 
-<% @albums.each do |album| %>
-  <%= album.name %>
-  <% end %>
+</body>
