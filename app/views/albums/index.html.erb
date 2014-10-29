@@ -12,7 +12,7 @@
       <tr>
   <td data-field = 'name'><%= album.name %> </th>
   <td data-field = 'ranking'><%= album.rank %> </th>
-  <td data-field = 'upvote'><%= link_to 'upvote', album_upvote_path(:id => album.id) %> </th>
+  <td data-field = 'upvote'><button><%= link_to '+', album_upvote_path(:id => album.id) %> </button></th>
   </tr>
   <% end %>
 

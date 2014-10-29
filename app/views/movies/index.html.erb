@@ -12,7 +12,7 @@
       <tr>
   <td data-field = 'name'><%= movie.name %> </th>
   <td data-field = 'ranking'><%= movie.rank %> </th>
-  <td data-field = 'upvote'><%= link_to 'upvote', movie_upvote_path(:id => movie.id) %> </th>
+  <td data-field = 'upvote'><button><%= link_to '+', movie_upvote_path(:id => movie.id) %></button> </th>
   </tr>
   <% end %>
 
