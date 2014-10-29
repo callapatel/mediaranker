@@ -42,6 +42,12 @@ class BooksController < ApplicationController
     end
   end
 
+  def upvote
+    @book = Book.find(params[:id])
+    Book.increment_counter(:rank, @book)
+    redirect_to root_path
+
+  end
 
 
 
