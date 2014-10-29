@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get "/albums/:id/edit",     to: "albums#edit",   as: :edit_album
   delete "/albums/:id",         to: "albums#destroy", as: :album
   post "/albums",             to: "albums#create"
-  get "/albums/:id/upvote", to: "albums#upvote"
+  get "/albums/:id/upvote", to: "albums#upvote", as: :album_upvote
 
   get "/books/new",            to: "books#new", as: :new_book
   get "/books/:id",            to: "books#details"
