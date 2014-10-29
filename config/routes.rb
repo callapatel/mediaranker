@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get "/movies/:id",          to: "movies#details"
   delete "/movies/:id",        to: "movies#destroy", as: :movie
   post "/movies",             to: "movies#create"
+  get "/upvote", to: "movies#upvote"
+
 
 
   get "/albums/new",         to: "albums#new", as: :new_album

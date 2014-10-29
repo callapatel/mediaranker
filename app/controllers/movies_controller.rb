@@ -40,6 +40,13 @@ class MoviesController < ApplicationController
     end
   end
 
+  def upvote
+    @movie = Movie.find(params[:id])
+    @uping = Movie.increment_counter(:rank, @movie)
+     redirect_to root_path
+   
+  end
+
 
 
 end
