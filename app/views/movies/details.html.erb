@@ -4,9 +4,9 @@
 <h4>Ranked: <%= @movie.rank %></h4>
 <%= @movie.description %><br></br>
 
-
+<button type="button" class="btn btn-primary btn-lg active"><%= link_to "upvote", movie_upvote_path(:id => @movie.id) %></button>
+<br></br>
 <button type="button" class="btn btn-default"><%= link_to "Edit #{@movie.name}", edit_movie_path %></button>
 <button type="button" class="btn btn-danger active"><%= link_to "Destroy", movie_path(@movie.id), :method => :delete, :confirm => "are you sure you want to delete?" %></button>
 <button type="button" class="btn btn-default"><%= link_to "View All Media", root_path %></button>
 <button type="button" class="btn btn-default"><%= link_to "View All Movies", movie_show_path %></button>
-<button type="button" class="btn btn-primary btn-lg active"><%= link_to "upvote", movie_upvote_path(:id => @movie.id) %></button>
