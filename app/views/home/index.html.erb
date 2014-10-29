@@ -2,25 +2,25 @@
 <div class='container'>
   <div class="row">
     <div class='sidebar col-lg-4'>
-      <h2> Top Movies: </h2>
+      <h1> Top Movies: </h1>
       <% @movies.each do |movie| %>
-        <br> <%= link_to movie.name, movie_path(movie.id) %> </br>
+        <h3> <%= link_to movie.name, movie_path(movie.id) %> </h3>
       <% end %>
       <%= link_to "create a new movie", new_movie_path %>
     </div>
 
     <div class="main col-lg-4">
-      <h2> Top Books: </h2>
+      <h1> Top Books: </h1>
       <% @books.each do |book| %>
-        <br> <%= link_to book.name, book_path(book.id) %> </br>
+        <h3> <%= link_to book.name, book_path(book.id) %> </h3>
       <% end %>
       <%= link_to "create a new book", new_book_path %>
     </div>
 
     <div class = "right col-lg-4">
-      <h2> Top Albums: </h2>
+      <h1> Top Albums: </h1>
       <% @albums.each do |album| %>
-        <br> <%= link_to album.name, album_path(album.id) %> </br>
+        <h3> <%= link_to album.name, album_path(album.id) %> </h3>
       <% end %>
       <%= link_to "add another album", new_album_path %>
     </div>
