@@ -1,11 +1,12 @@
 
-<%= @book.name %>
-<%= @book.description %>
-<%= @book.author %>
-<%= @book.rank %>
+<h2>Title: <%= @book.name %>
+<small>Author: <%= @book.author %></small></h2>
+<h4>Ranked: <%= @book.rank %></h4>
+<%= @book.description %><br></br>
 
-<%= link_to "Edit", edit_book_path %>
-<%= link_to "Destroy", book_path(@book.id), :method => :delete, :confirm => "are you sure you want to delete?" %>
-<%= link_to "View All Media", root_path %>
-<%= link_to "View All Books", book_show_path %>
-<%= link_to "Upvote", book_upvote_path(:id => @book.id) %>
+
+<button type="button" class="btn btn-default"><%= link_to "Edit #{@book.name}", edit_book_path %></button>
+<button type="button" class="btn btn-danger active"><%= link_to "Destroy", book_path(@book.id), :method => :delete, :confirm => "are you sure you want to delete?" %></button>
+<button type="button" class="btn btn-default"><%= link_to "View All Media", root_path %></button>
+<button type="button" class="btn btn-default"><%= link_to "View All Books", book_show_path %></button>
+<button type="button" class="btn btn-primary btn-lg active"><%= link_to "upvote", book_upvote_path(:id => @book.id) %></button>
