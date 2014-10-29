@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete "/movies/:id",        to: "movies#destroy", as: :movie
   post "/movies",             to: "movies#create"
   get "/movies/:id/upvote", to: "movies#upvote", as: :movie_upvote
+  get "/movies",              to: "movies#index", as: :movie_show
 
   get "/albums/new",         to: "albums#new", as: :new_album
   get "/albums/:id",          to: "albums#details"
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   delete "/albums/:id",         to: "albums#destroy", as: :album
   post "/albums",             to: "albums#create"
   get "/albums/:id/upvote", to: "albums#upvote", as: :album_upvote
+  get "/albums",              to: "albums#index", as: :album_show
+
 
   get "/books/new",            to: "books#new", as: :new_book
   get "/books/:id",            to: "books#details"
@@ -28,6 +31,8 @@ Rails.application.routes.draw do
   delete "/books/:id",        to: "books#destroy", as: :book
   post "/books",             to: "books#create"
   get "/books/:id/upvote", to: "books#upvote", as: :book_upvote
+  get "/books",              to: "books#index", as: :book_show
+
 
 
 
