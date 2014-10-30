@@ -10,3 +10,5 @@
           <p><%= f.submit %></p>
         <% end %>
 </div>
+
+<%= render "/shared/form.html.erb", url: edit_album_path(@album.id),  object: @album, creator: :artist %>
