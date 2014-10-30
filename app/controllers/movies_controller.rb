@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
-  
+
   end
 
   def edit
@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
 
   def update
     @movie = Movie.find(params[:id])
-    if @movie.update(params.require[:movie].permit(:name, :director, :description, :ranking))
+    if @movie.update(params.require(:movie).permit(:name, :director, :description, :ranking))
       redirect_to "/"
     else
       render :edit
